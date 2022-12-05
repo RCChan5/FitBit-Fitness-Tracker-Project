@@ -5,6 +5,7 @@ import datetime as dt
 import seaborn as sns
 import matplotlib.pyplot as plt
 import altair as alt
+import sklearn
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
@@ -26,6 +27,7 @@ with tab1:
     ############
     st.header("Fitbit Users Daily Activity Leaderboard")
     st.write("This is a Dashboard showing a summary of all users activity and trends:")
+    st.write("Steps Taken:")
 
 
 
@@ -41,7 +43,7 @@ with tab1:
     st.altair_chart(c1, use_container_width=True)
 
 
-    st.write("Calories Burnt")
+    st.write("Calories Burnt:")
     c2=alt.Chart(daily_activity).mark_bar().encode(
         x= alt.X("Calories",  bin=alt.Bin(maxbins=40)),
         y='count()'
@@ -50,7 +52,7 @@ with tab1:
     st.altair_chart(c2, use_container_width=True)
 
 
-    st.write("Sedentary Minutes")
+    st.write("Sedentary Minutes:")
     c3=alt.Chart(daily_activity).mark_bar().encode(
         x= alt.X("SedentaryMinutes",  bin=alt.Bin(maxbins=20)),
         y='count()'
@@ -58,7 +60,7 @@ with tab1:
 
     st.altair_chart(c3, use_container_width=True)
 
-    st.write("Total Time In Bed")
+    st.write("Total Time In Bed:")
 
     c4=alt.Chart(sleep).mark_bar().encode(
         x= alt.X("TotalTimeInBed",  bin=alt.Bin(maxbins=10)),
