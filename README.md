@@ -2,8 +2,7 @@
 # Fitbit Fitness Tracker Project
  
 [Data Source](https://www.kaggle.com/datasets/arashnic/fitbit)
- 
-[Streamlit Dashboard](https://rcchan5-salaries-in-data-scienc-salaries-in-data-science-4bdicp.streamlit.app/)
+
 
 ## Introduction:
 
