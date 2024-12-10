@@ -20,6 +20,3 @@ The goal of this database is to provide users with access to data of the larger 
 
 ●	Each daily activity can have one to many sleep times
 
-## Entity Relationship Diagram(ERD):
-
-## Dashboard Features
